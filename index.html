@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Brexit Breadown: Twitter Analysis</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="An analysis of Brexit trade deal tweets"
+    />
+    <meta
+      name="keywords"
+      content="Brexit, Twitter, tweets, reports, analysis, Trade Deal"
+    />
+    <meta name="web_author" content="Harry Turner" />
+    <meta name="language" content="English" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+      <!-- Intro -->
+      <div id="intro">
+        <h1>Breaking Down Brexit</h1>
+        <p>
+          An analysis of 'Brexit' tweets taken on the day of the deal's
+          announcement
+        </p>
+      </div>
+
+      <!-- Header -->
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://twitter.com/TurnerHaaa"
+              class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ha.turner/"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Featured Post -->
+        <section class="post">
+          <h2>Background</h2>
+          <p>
+            On 24 December 2020 the United Kingdom and European Union finalised
+            a post-Brexit trade deal, just days before the hard deadline of a 31
+            December withdrawal. The conclusion of these hard-fought
+            negotiations proved a landmark seal on a process initiated over four
+            years ago following the UK’s 2016 EU membership referendum. For
+            some, the occasion was a triumph for British autonomy and trade, for
+            others, a somber withdrawal from invaluable regional partners.
+          </p>
+          <blockquote class="twitter-tweet tw-align-center">
+            <p lang="en" dir="ltr">
+              The deal is done.
+              <a href="https://t.co/zzhvxOSeWz">pic.twitter.com/zzhvxOSeWz</a>
+            </p>
+            &mdash; Boris Johnson (@BorisJohnson)
+            <a
+              href="https://twitter.com/BorisJohnson/status/1342123159181516802?ref_src=twsrc%5Etfw"
+              >December 24, 2020</a
+            >
+          </blockquote>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+          <h2>Research Outline</h2>
+          <p>
+            This report details a broad analysis of tweets containing the term
+            ‘Brexit’ gathered on 24 December. The resulting tweets, which span a
+            time frame of 11:38am-4:42pm, were gathered using a
+            <a
+              href="https://gist.github.com/TurnerHaa/42ea2f5a59efb28d5fabf07da3d369aa"
+              >Python script</a
+            >
+            designed to obtain and write tweet data into a Comma Separated
+            Values format.
+          </p>
+          <p>
+            Of the 138,254 tweets gathered over a period just over five hours-
+            83,742, or 60.6%, were retweets. However,
+            <a href="https://www.danah.org/papers/TweetTweetRetweet.pdf"
+              >Boyd et al.</a
+            >
+            (2010) argue retweets are not only conversational, but turn linear
+            conversation into broader, overlapping discourse often with
+            additional meaning.
+          </p>
+          <h4 style="text-align: center">Tweet to Retweet Ratio</h4>
+          <div class="chart" id="chart1"></div>
+          <p>
+            <a
+              href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206076"
+              >Majmundar et al.</a
+            >
+            (2018) simplify the explanation with their
+            <i>Why We Retweet</i> scale which suggests that retweets are equally
+            valid forms of expression as original tweets, able to reflect a
+            range of positions including- approval, argument, attention and
+            entertainment.
+          </p>
+          <p>
+            For these reasons, retweets are included across all aspects of the
+            analysis unless otherwise specified.
+          </p>
+          <h2>Overview</h2>
+          <h4 style="text-align: center">Tweets Per Minute</h4>
+          <div class="chart" id="chart2"></div>
+          <p>
+            The timeline displayed here reflects the volume of tweets made each
+            minute across the entire dataset. Expectedly, the sharp upward
+            trajectory just before 3:00pm reflects the moments immediately
+            preceding the announcement of the deal.
+          </p>
+          <p>
+            Prior to 2:35pm, the average tweet rate was 217 tweets per minute
+            (TPM). This already notable discourse is likely a reflection of an
+            anticipatory news cycle providing heavy Brexit coverage, the looming
+            withdrawal deadline of December 31 and potentially Christmas Eve
+            meaning more users had the free time to engage in online discourse.
+          </p>
+          <p>
+            Curiously, a small uptick in tweet volume reaching 283 tweets
+            appears to proceed a much greater increase in overall volume,
+            perhaps suggesting a certain community was informed of the deal’s
+            confirmation before it reached mainstream conversation.
+          </p>
+          <p>
+            Between 2:30pm and 3:00pm the TPM more than triples the prior
+            average, reaching a peak of 1099 at 2:56pm. The peak is then
+            followed by a steadier decline ending at 4:42pm, with an average of
+            280 TPM for the final hour.
+          </p>
+          <h4 style="text-align: center">
+            Tweet to Retweet Per Minute (condensed)
+          </h4>
+          <div class="chart" id="chart3"></div>
+          <p>
+            Also, at 2:56pm, Scottish First Minister Nicola Sturgeon shared her
+            misgivings with the Brexit process in a tweet that quickly became
+            the most retweeted across the data at 5,231 retweets, suggesting her
+            contribution potentially influenced the graph’s highest point.
+          </p>
+          <blockquote class="twitter-tweet tw-align-center">
+            <p lang="en" dir="ltr">
+              Before the spin starts, it’s worth remembering that Brexit is
+              happening against Scotland’s will. And there is no deal that will
+              ever make up for what Brexit takes away from us. It’s time to
+              chart our own future as an independent, European nation.
+            </p>
+            &mdash; Nicola Sturgeon (@NicolaSturgeon)
+            <a
+              href="https://twitter.com/NicolaSturgeon/status/1342121870192214020?ref_src=twsrc%5Etfw"
+              >December 24, 2020</a
+            >
+          </blockquote>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+          <p>
+            Condensing the graph to a two-hour span between 14:00pm-4:00pm and
+            separating tweets and retweets corroborates this argument as
+            retweets peak the same minute as Sturgeon’s post.
+          </p>
+          <p>
+            Interestingly, although original tweets match the trend of a sharp
+            rise from 14:35, a peak tweet volume of 501 wasn’t achieved until 17
+            minutes after retweets had peaked. This might reflect a delay for
+            users to compose their own original thoughts as well as the absence
+            of news and other retweet bots artificially inflating the volume of
+            earlier reactions.
+          </p>
+
+          <h2>Contributors</h2>
+          <h4 style="text-align: center">
+            Historgram of Total Tweets per User
+          </h4>
+          <div class="chart" id="chart4"></div>
+          <p>
+            The vast majority of users contributed a single tweet through the
+            duration of the data collection, with the overall average being 1.75
+            tweets per user.
+          </p>
+          <p>
+            However, the top tweeters contributed significantly more than
+            average, with top user @PandaScottish releasing 180 total tweets,
+            over 10x the average.
+          </p>
+          <h4 style="text-align: center">
+            Top 10 Tweeters By Tweets and Retweets
+          </h4>
+          <div class="chart" id="chart5"></div>
+          <p>
+            The range of values within the top 10 tweeters was still
+            surprisingly divided, with the top three tweeters producing a
+            combined 470 tweets versus the 460 totals of the remaining seven. In
+            total, the top ten tweeters contributed 0.67% of the entire sample.
+          </p>
+          <p>
+            The substantially higher than average tweet volume and political
+            nature of the content could imply the vast majority if not all top
+            accounts are bots;
+            <a href="https://arxiv.org/ftp/arxiv/papers/1606/1606.06356.pdf"
+              >Howard and Kollanyi</a
+            >
+            (2016) who observed similar hashtags during the 2016 EU referendum
+            found that accounts with substantial tweet rates were potentially
+            indicative of bots.
+          </p>
+          <p>
+            Utilising the online
+            <a href="https://botometer.osome.iu.edu/">‘Botometer’</a> tool, all
+            of the top 10 accounts were tested to unveil their bot score before
+            a second human screening. A 2018
+            <a
+              href="https://www.pewresearch.org/internet/2018/04/09/bots-in-the-twittersphere-methodology/"
+              >study</a
+            >
+            looking to identify Twitter bots used the botometer API with a
+            threshold of 0.43 on a scale of 0-1 above which an account was
+            considered a bot. The online tool uses a 0-5 scale so assuming the
+            working limit in this case was 2.15.
+          </p>
+          <h4>Top 10 Tweeters Bot Analysis</h4>
+          <div class="table-wrapper">
+            <table class="alt">
+              <thead>
+                <tr>
+                  <th>Handle</th>
+                  <th>Total Tweets</th>
+                  <th>Botometer Score</th>
+                  <th>Bot?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@PandaScottish</td>
+                  <td>180</td>
+                  <td>1.2</td>
+                  <td>Unlikely</td>
+                </tr>
+                <tr>
+                  <td>@JKLDNMAD</td>
+                  <td>155</td>
+                  <td>3.4</td>
+                  <td>Likely</td>
+                </tr>
+                <tr>
+                  <td>@isthisab0t</td>
+                  <td>135</td>
+                  <td>4.1</td>
+                  <td>Likely</td>
+                </tr>
+                <tr>
+                  <td>@TracyGa20473477</td>
+                  <td>84</td>
+                  <td>3.6</td>
+                  <td>Likely</td>
+                </tr>
+                <tr>
+                  <td>@SerendipitySays</td>
+                  <td>77</td>
+                  <td>2.9</td>
+                  <td>Unlikely</td>
+                </tr>
+                <tr>
+                  <td>@HatsOfDefiance</td>
+                  <td>76</td>
+                  <td>1.8</td>
+                  <td>Unlikely</td>
+                </tr>
+                <tr>
+                  <td>@HalseyJane</td>
+                  <td>67</td>
+                  <td>4.3</td>
+                  <td>Likely</td>
+                </tr>
+                <tr>
+                  <td>@Gordon1000</td>
+                  <td>64</td>
+                  <td>4.0</td>
+                  <td>Likely</td>
+                </tr>
+                <tr>
+                  <td>@colinth7</td>
+                  <td>64</td>
+                  <td>0.9</td>
+                  <td>Unlikely</td>
+                </tr>
+                <tr>
+                  <td>@JohnKLDN</td>
+                  <td>61</td>
+                  <td>4.1</td>
+                  <td>Likely</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Assuming Botometer is correct, only @PandaScottish, @HatsofDefiance
+            and @colinth7 were considered likely to be human, the large tweet to
+            retweet ratio of the first two a good indication of bucking the
+            trend of the dataset. @colinth7 for whom all collected tweets were
+            retweets was more suspicious, however review of non-retweet content
+            using Twitter’s advanced search reveals the account regularly
+            contributes unique, eloquent replies and was actively doing so as
+            recently as 8 January.
+          </p>
+          <p>
+            Similar activity traits from @JKLDNMAD, @SerendipitySays and
+            @JohnKLDN might also suggest these accounts are unique. However,
+            these were hard to distinguish even on human review. Two accounts
+            both contain KLDN, an acronym that was hard to identify but repeat
+            appearance seems at best suspiciously coincidental.
+          </p>
+          <p>
+            Both account bios also contain ‘Does not like Brexit’, identify as
+            Lancastrian, and frequent the hashtag ‘ToryBrexit’ suggesting they
+            are not only bots, but potentially part of the same network.
+          </p>
+          <p>
+            @SerendipitySays was harder to clarify, however their bio
+            self-identification as an ‘over-enthusiastic retweeter’ and
+            ten-year-old account suggested they may in fact be a human.
+          </p>
+          <p>
+            All three accounts exhibit a high retweet rate but also wrote well
+            written responses to certain threads outside of the dataset. This
+            may either indicate nearly indistinguishable bots, or users with
+            semi-automated accounts that they occasionally sign into and use
+            themselves.
+          </p>
+          <h4>Top 10 Retweeted Tweets</h4>
+          <div class="table-wrapper">
+            <table class="alt">
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Verified</th>
+                  <th>Text</th>
+                  <th>Retweets</th>
+                  <th>Followers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@NicolaSturgeon- Scottish First Minister</td>
+                  <td>
+                    Before the spin starts, it’s worth remembering that Brexit
+                    is happening against Scotland’s will. And there is no deal
+                    that will ever make up for what Brexit takes away from us.
+                    It’s time to chart our own future as an independent,
+                    European nation.
+                  </td>
+                  <td>5,231</td>
+                  <td>Yes</td>
+                  <td>1.4M</td>
+                </tr>
+                <tr>
+                  <td>@spectatorindex- Unverified news page</td>
+                  <td>BREAKIMG: EU and UK reach historic Brexit deal</td>
+                  <td>1,636</td>
+                  <td>No</td>
+                  <td>1.8M</td>
+                </tr>
+                <tr>
+                  <td>@BBCBreaking- Verified Twitter of BBC News</td>
+                  <td>
+                    UK and EU agree post-Brexit trade deal after months of
+                    deadlock, meaning big changes from 1 January 2021
+                  </td>
+                  <td>1,404</td>
+                  <td>Yes</td>
+                  <td>47.1M</td>
+                </tr>
+                <tr>
+                  <td>
+                    @GuyReuters- Reuters Bureau Chief UK and Ireland, personal
+                    account
+                  </td>
+                  <td>JPMorgan on the Brexit deal:</td>
+                  <td>1,122</td>
+                  <td>Yes</td>
+                  <td>6,245</td>
+                </tr>
+                <tr>
+                  <td>@RussInCheshire- Centre Left Remainer</td>
+                  <td>
+                    The Brexit Agreement is 2000 pages long, and Parliament has
+                    to read it, scrutinise it, and debate it - via Zoom - in one
+                    day. For reference, Lord Of The Rings is 1137 pages. And it
+                    probably contains fewer acts of fantasy and wholesale
+                    demolition.
+                  </td>
+                  <td>1,014</td>
+                  <td>No</td>
+                  <td>136.6k</td>
+                </tr>
+                <tr>
+                  <td>@NicolaSturgeon- Scottish First Minister</td>
+                  <td>
+                    There will be lots of focus - rightly - on the economic
+                    costs of Brexit. But ending UK participation in Erasmus - an
+                    initiative that has expanded opportunities and horizons for
+                    so many young people - is cultural vandalism by the UK
+                    government.
+                  </td>
+                  <td>1,271</td>
+                  <td>Yes</td>
+                  <td>1.4M</td>
+                </tr>
+                <tr>
+                  <td>@NicolaSturgeon- Scottish First Minister</td>
+                  <td>
+                    This is a disastrous Brexit outcome for Scottish
+                    farmers...and like all other aspects of Brexit, foisted on
+                    Scotland against our will.
+                  </td>
+                  <td>726</td>
+                  <td>Yes</td>
+                  <td>1.4M</td>
+                </tr>
+                <tr>
+                  <td>@JulieHSoc1- Unknown</td>
+                  <td>
+                    CNN blasting the whole Brexit process and classing it a 'far
+                    right' enterprise, which has turned into a shitshow at
+                    Dover. Great to hear the truth on the telly at last.
+                  </td>
+                  <td>527</td>
+                  <td>No</td>
+                  <td>2,003</td>
+                </tr>
+                <tr>
+                  <td>
+                    @afpfr- French newsfeed curated from international
+                    journalists
+                  </td>
+                  <td>
+                    Le Royaume-Uni et l'Union européenne sont arrivés à un
+                    accord post-Brexit (source gouvernementale britannique)
+                  </td>
+                  <td>387</td>
+                  <td>Yes</td>
+                  <td>3.5M</td>
+                </tr>
+                <tr>
+                  <td>@DPJHodges- Commentator Mail on Sunday</td>
+                  <td>
+                    Boris said if Britain voted for him he would get Brexit
+                    done. He did.
+                  </td>
+                  <td>355</td>
+                  <td>Yes</td>
+                  <td>141k</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            @NicolaSturgeon dominates the top retweets of the dataset with her
+            most retweeted tweet retweeted 219% more than the second most
+            retweeted by the news source @spectatorindex. Furthermore,
+            Sturgeon’s tweets also make up the 6th and 7th most retweeted in the
+            dataset giving here a combined total of 7,228 retweets in just the
+            top ten. It is worth noting that given the data runs only until
+            approximately two hours after the announcement, the implication is
+            not only that Sturgeon was a substantial voice in the discourse, but
+            one of the quickest figures to engage with the topic.
+          </p>
+          <p>
+            Sturgeon is wholly critical of Brexit citing issues with the
+            economy, Erasmus and lack of Scottish autonomy in the decision.
+            Stieglitz and Dang-Xuan (2012) found that tweets containing apparent
+            positive or negative emotions were most likely to spread throughout
+            Twitter, perhaps enhanced in this case by Sturgeon’s authoritative
+            position on the topic.
+          </p>
+          <p>
+            The second two most retweeted posts were by news sources
+            @spectatorindex and @BBCBreaking. The BBC’s followers would suggest
+            a substantially larger reach however they fall 200 retweets short of
+            @spectatorindex.
+          </p>
+          <p>
+            An explanation can be found in the tweet timings, with @BBCBreaking
+            tweeting the story at 2:52pm a full eight minutes after
+            @spectatorindex even despite the lack of verification on the latter
+            account. This might suggest user’s valued the speed of news delivery
+            over reliability.
+            <a
+              href="https://journals.sagepub.com/doi/abs/10.1177/1464884918802975"
+              >McGregor and Molyneux</a
+            >
+            (2018) have research that indicated US journalists, especially less
+            experienced ones, were more willing to accept Twitter news as fact
+            often by virtue of the platform. However, the BBC also maintains
+            several other news accounts and may have a greater number of total
+            retweets across their coverage.
+          </p>
+          <p>
+            Interestingly, only one tweet reflected anything vaguely pro-Brexit
+            (6 being anti-Brexit and 3 being news sites.) @DPJHodges who writes
+            for Mail on Sunday expressed support for Boris having completed
+            Brexit, however at 355 retweets his relative voice is retweeted
+            1,373% less than Sturgeon’s number one critique. This might suggest
+            the majority of tweets were made by Brexit critics but this is an
+            incredibly vague inference given the total size of the dataset. It
+            may also be that anti-Brexit sentiment simply disseminated faster
+            than pro-Brexit comment, but even this requires further
+            investigation.
+          </p>
+          <p>
+            Notably, all accounts have substantial followings with the lowest
+            (@JulieHSoc1 2,003) still well above the sitewide average of 707.
+            However Julie's 2,003 followers are substantially lower than th
+            141,000 of the next lowest suggesting her post was a single 'viral'
+            share.
+          </p>
+          <p>
+            Surprisingly, the average for the dataset is 53,046. Top followed
+            users in the data include @Reuters, @CGTNOfficial, @SkyNews, @CNN
+            and @nytimes- with double digit million followings. Therefore the
+            breaking nature of the story likely explains this substantial
+            increase. Despite this, none of these publications proved top
+            retweeteted with, users seemingly preferring to amplify what appear
+            to be personal accounts.
+          </p>
+
+          <h3>Location</h3>
+          <div class="row">
+            <div class="col-6">
+              <h3 align="center">Geo-location allowed?</h3>
+              <div class="chart" id="chart6"></div>
+            </div>
+            <div class="col-6">
+              <h3 align="center">Locations on profile</h3>
+              <div class="chart" id="chart7"></div>
+            </div>
+          </div>
+          <p>
+            A total of 40.2% had geolocation enabled for their tweets, a
+            surprisingly large figure given the feature is off by default. This
+            may be users actively opting into geolocation for their own data or
+            transparency, but may also reflect users who blindly accepted by
+            activation prompts by Twitter.
+          </p>
+          <p>
+            A much greater percentage, 70.4% of users had enabled location data,
+            the equivalent of 97,276 users.
+          </p>
+          <p>
+            As expected, the UK and England dominate the highest listed
+            countries with a combined 8,372 users listing their location as one
+            of the two.
+          </p>
+          <div class="row">
+            <div class="col-6">
+              <h3 align="center">Top Tweeting Countries</h3>
+              <div class="chart" id="chart8"></div>
+            </div>
+            <div class="col-6">
+              <h3 align="center">Top Tweeting Cities</h3>
+              <div class="chart" id="chart9"></div>
+            </div>
+          </div>
+          <p>
+            Scotland proved the third highest country with 2,594. Interestingly,
+            included in the count are 60 counts of ‘Scotland, Europe’ and a
+            further 39 ‘Republic of Scotland’, a trend also seen in 55 Welsh
+            location entries containing 'Republic of Wales', contributing 11.6%
+            of the total Welsh location entries.
+          </p>
+          <p>
+            This seems to suggest users were using the location box as a form of
+            quiet protest against Brexit. This may also explain why Brussels
+            ranked fourth for total tweets by city and a combined 1010 users
+            entered either Europe or European Union.
+          </p>
+          <p>
+            A more obvious indication of sentiment was witnessed in some
+            individual users, for example @Kilsally who’s location ‘Sold to the
+            EU by Boris’ seemingly indicates dissatisfaction with the resultant
+            deal.
+          </p>
+          <p>
+            Four EU member states; France, Netherlands, Italy and Spain
+            contribute to the top 10 countries, interestingly Belgium ranks 13th
+            despite Brussels being the fourth ranked city. This might further
+            suggest that ‘Brussels’ as a location is a form of subtle protest
+            against the UK’s decision/solidarity with the EU.
+          </p>
+          <p>
+            It’s worth noting that whilst ‘Brexit’ has become incredibly
+            normalised in press coverage across the UK, it may not have gained
+            the same traction in other regions and, whilst the results here are
+            what we might expect, it’s important to knowledge linguistic
+            differences may be slightly distorting location rankings.
+          </p>
+
+          <h3>Discourse</h3>
+          <span class="image fit">
+            <img
+              src="WordCloud.png"
+              alt="A word cloud of terms associated with Brexit taken from the dataset with some larger and smaller than others based on how frequently they occur. The entire word cloud is in the shape and colour of the Twitter logo."
+            />
+          </span>
+          <p>
+            A word cloud of the entire collected Tweet text doesn’t immediately
+            unveil unexpected trends or sentiment but explains existing stances.
+            ‘Eu’, ‘Deal’ and ‘UK’ are expectedly large terms both due to their
+            fundamental relation to the discourse and the high likelihood of the
+            terms appearing in news and other retweet bots breaking the story.
+          </p>
+          <p>
+            Medium sized text deepens understanding of the dataset. The high
+            presence of ‘Johnson’, ‘Boris’ and ‘Pm’ reflect the obvious coverage
+            of the British prime minister across the dataset.
+          </p>
+          <p>
+            A high presence of Scottish terms: ‘Scotland’ and ‘Nicolasturgeon’,
+            reflect trends observed in location data where Glasgow and Edinburgh
+            were second only to London in terms of tweet volume. Curiously,
+            ‘spin’ reflects the opening line of Nichola Sturgeon’s most
+            retweeted post, reflecting the power of her single voice in the
+            dataset.
+          </p>
+          <p>
+            A few other political figures can also be spotted with the data
+            including ‘Ursula’ and ‘Von’, referring to Ursula Von Der Leen the
+            President of the European Commission and ‘Nigel’, potentially a
+            reference to Nigel Farage, the former Member of European parliament
+            and renowned Brexit proponent.
+          </p>
+          <p>
+            Several ‘hot’ talking points around Brexit also emerge including
+            ‘fish’, relating to the contentious point of handling British
+            fishing territory in the trade deal and ‘Erasmus’, amplified by
+            Nicola Sturgeon and referring to the student exchange program that
+            many lamented losing through Brexit.
+          </p>
+
+          <h3>Conclusion</h3>
+          <p>
+            Overall, the impact of the trade deal announcement can clearly be
+            seen to have drastically spiked an already healthy Twitter discourse
+            surrounding the term ‘Brexit’. It’s difficult with the level of
+            analysis undertaken here to provide definitive sentiment, but these
+            preliminary findings indicate an anti-Brexit sentiment amongst the
+            discussion’s loudest voices, with an English/Scottish centric
+            dominance of location data.
+          </p>
+          <p>
+            More broadly, the biggest implication for this data are the many
+            barriers to assessing a ‘representative’ discourse through Twitter
+            analysis. Temporal decisions affect who is tweeting and where, bots
+            are potentially near indistinguishable from human users with
+            implications for assumptions placed on both parties.
+          </p>
+        </section>
+
+        <!-- Footer -->
+        <footer></footer>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li>
+              <a
+                href="https://twitter.com/TurnerHaaa"
+                class="icon brands alt fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/ha.turner/"
+                class="icon brands alt fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+          </ul>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+        <ul>
+          <li>&copy; Harry Turner</li>
+          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="charts.js"></script>
+  </body>
+</html>
