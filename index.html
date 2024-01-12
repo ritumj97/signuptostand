@@ -132,41 +132,10 @@
                         statistics about women in power.
                     </p>
 
-                    <div
-                        id="myChart"
-                        style="max-width: 700px; height: 400px"
-                    ></div>
-                    <script src="https://www.gstatic.com/charts/loader.js">
-
-                          google.charts.load('current',{packages:['corechart']});
-                          google.charts.setOnLoadCallback(drawChart);
-
-                        function drawChart() {
-
-
-                          const data = google.visualization.arrayToDataTable(
-                            ['User', 'Tweets'],
-                            ['@5050Parliament', 1308],
-                            ['@FScott5050', 78],
-                            ['@DollyvanT', 60],
-                            ['@Jobaldwintrott', 22],
-                            ['@TinaBhartwas', 18],
-                            ['@Zebra_carol', 17],
-                            ['@Rach31M', 15],
-                            ['@janewhild', 14],
-                            ['@Baronessjenkin', 12],
-                            ['CWOwestmidlands', 10]
-                          );
-
-                          const options = {
-                            title: 'Most active users in the campaign'
-                          };
-
-                          const chart = new google.visualization.BarChart(document.getElementById('myChart'));
-                          chart.draw(data, options);
-
-                          }
-                    </script>
+                    <h4 style="text-align: center">
+                        Change the heading here Ritu and send money
+                    </h4>
+                    <div class="chart" id="chart10"></div>
 
                     <p>
                         The second top tweeter is also not a big surprise.
@@ -500,33 +469,11 @@
                         charset="utf-8"
                     ></script>
 
-                    <div
-                        id="myChart1"
-                        style="max-width: 700px; height: 400px"
-                    ></div>
-                    <script>
-                        function drawChart() {
-                            const data = google.visualization.arrayToDataTable([
-                                ['Tweets', 'Month'],
-                                [12, 'November 2020'],
-                                [4.2, 'November 2021'],
-                                ['5.3,NOvember 2022'],
-                                ['4,November 2023'],
-                            ])
-
-                            const options = {
-                                title: 'Tweet rate per day  in November over the years',
-                                hAxis: { title: 'Number of tweets' },
-                                vAxis: { title: 'Period from 2020 - 2023' },
-                                legend: 'none',
-                            }
-
-                            const chart = new google.visualization.LineChart(
-                                document.getElementById('myChart')
-                            )
-                            chart.draw(data, options)
-                        }
-                    </script>
+                    <h4 style="text-align: center">
+                        Change the heading here as well Ritu the great and send
+                        money
+                    </h4>
+                    <div class="chart" id="chart11"></div>
 
                     <script
                         async
@@ -682,7 +629,6 @@
             <div id="copyright">
                 <ul>
                     <li>&copy; Ritu MJ</li>
-                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
                 </ul>
             </div>
         </div>

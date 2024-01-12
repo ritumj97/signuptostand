@@ -1425,3 +1425,83 @@ var chart4 = c3.generate({
         },
     },
 })
+
+var chart10 = c3.generate({
+    bindto: '#chart10',
+    data: {
+        x: 'User',
+        columns: [
+            [
+                'User',
+                '@5050Parliament',
+                '@FScott5050',
+                '@DollyvanT',
+                '@Jobaldwintrott',
+                '@TinaBhartwas',
+                '@Zebra_carol',
+                '@Rach31M',
+                '@janewhild',
+                '@Baronessjenkin',
+                'CWOwestmidlands',
+            ], // User names
+            ['Tweets', 1308, 78, 60, 22, 18, 17, 15, 14, 12, 10], // Corresponding number of tweets
+        ],
+        type: 'bar',
+    },
+    axis: {
+        rotated: true, // This makes the bar chart horizontal
+        x: {
+            type: 'category', // This is needed when the x-axis is categorical (like user names)
+            tick: {
+                rotate: -75,
+                multiline: false,
+            },
+            height: 80, // Adjust as needed for label space
+        },
+        y: {
+            label: {
+                text: 'Number of Tweets',
+                position: 'outer-middle',
+            },
+        },
+    },
+    bar: {
+        width: {
+            ratio: 0.5, // Adjust bar width as needed
+        },
+    },
+})
+
+var chart = c3.generate({
+    bindto: '#chart11', // Make sure this matches the ID of the container where you want to display the chart
+    data: {
+        x: 'x',
+        columns: [
+            ['x', 'Nov 2020', 'Nov 2021', 'Nov 2022', 'Nov 2023'], // X-axis labels (years)
+            ['Tweets', 12, 4.2, 5.3, 4], // Y-axis values (tweet rates)
+        ],
+        type: 'line', // Specifies that we want a line chart
+    },
+    axis: {
+        x: {
+            type: 'category', // This is needed for non-numeric x-axis like dates or categories
+            tick: {
+                rotate: 0,
+                multiline: false,
+            },
+            height: 60, // Adjust for label space
+        },
+        y: {
+            label: {
+                text: 'Number of Tweets',
+                position: 'outer-middle',
+            },
+        },
+    },
+    legend: {
+        show: false, // Set to true if you want to show the legend
+    },
+    title: {
+        text: 'Tweet rate per day in November over the years', // Chart title
+    },
+})
