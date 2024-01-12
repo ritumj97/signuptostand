@@ -1,340 +1,712 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Sign Up To Stand Twitter Analysis</title>
-    <meta charset="utf-8" />
-    <meta
+    <head>
+        <title>Sign Up To Stand Twitter Analysis</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <meta
+            name="description"
+            content="Analysis of 'Sign Up To Stand' and Women in Parliament"
+        />
+        <meta
+            name="keywords"
+            content="Sign up to stand, Twitter, tweets, ask her to stand, analysis, parliament"
+        />
+        <meta name="web_author" content="Ritu MJ" />
+        <meta name="language" content="English" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript
+            ><link rel="stylesheet" href="assets/css/noscript.css"
+        /></noscript>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+            <!-- Intro -->
+            <div id="intro">
+                <h1>Analysis of 'Sign Up To Stand' and Women in Parliament</h1>
+            </div>
+
+            <!-- Header -->
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="icons">
+                    <li>
+                        <a
+                            href="https://twitter.com/RituMjo"
+                            class="icon brands fa-twitter"
+                            ><span class="label">Twitter</span></a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/ritu.mj/"
+                            class="icon brands fa-instagram"
+                            ><span class="label">Instagram</span></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+                <section class="post">
+                    <h2>Background</h2>
+                    <p>
+                        A century has passed since women were given the right to
+                        enter the corridors of power in the British Parliament
+                        under the Parliament (Qualification of Women) Act.
+                        Although Constance Markiewicz holds the title of being
+                        the first woman elected to the House of Commons in 1918,
+                        Nancy Astor was the first female MP to take up a seat at
+                        Westminster in 1919.
+                    </p>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+                    <p>
+                        Labour MP Diane Abbott was the first black woman elected
+                        to Parliament in the UK.
+                    </p>
+                    <p>
+                        For 4,503 male MPs, there have only been 491 female MPs
+                        in the last 100 years, according to a BBC report.
+                    </p>
+                    <h4 style="text-align: center">Tweet to Retweet Ratio</h4>
+                    <div class="chart" id="chart1"></div>
+                    <p>
+                        50:50 Parliament is a cross-party campaign founded by
+                        Frances Scott in 2013 - when there were three times more
+                        men in Parliament than women - to achieve gender
+                        equality in Parliament and other levels of elected
+                        office. Scott first launched an online petition which
+                        received over 50,000 signatures from people supporting
+                        women’s progress in politics.
+                    </p>
+                    <p>
+                        Under the initiative, #SignUpToStand and #AskHerToStand
+                        campaigns were started along with group events,
+                        peer-to-peer advice, buddy schemes and ‘Become A
+                        Friend’. Currently a 30 + strong team, they have
+                        encouraged nearly 2,500 women from various backgrounds
+                        and ethnicities to #SignUpToStand by offering various
+                        access and entry points.
+                    </p>
+                    <p>
+                        Scraping tweets related to the campaign on Sign Up To
+                        Stand - Ask Her To Stand Day from May 2020 to November
+                        2023 and drawing a comparison to the data of women in
+                        Parliament will help analyse the significance of similar
+                        initiatives supporting women in politics and power.
+                    </p>
+                    <h2>Who are the top tweeters?</h2>
+                    <h4 style="text-align: center">Tweets Per Minute</h4>
+                    <div class="chart" id="chart2"></div>
+                    <p>
+                        Unsurprisingly, the official X account of the 50:50
+                        Parliament campaign takes up a major chunk - nearly 65
+                        per cent - of the total number of posts since 2020. The
+                        account regularly posts announcements about community
+                        workshops encouraging women to stand for elections as
+                        well as retweeting and congratulating female candidates
+                        from across parties in various elections in the UK. The
+                        account also retweets posts of its new CEO Lyanne
+                        Nichols and founder Frances Scott who share posts and
+                        statistics about women in power.
+                    </p>
+
+                    <div
+                        id="myChart"
+                        style="max-width: 700px; height: 400px"
+                    ></div>
+                    <script src="https://www.gstatic.com/charts/loader.js">
+
+                          google.charts.load('current',{packages:['corechart']});
+                          google.charts.setOnLoadCallback(drawChart);
+
+                        function drawChart() {
 
 
+                          const data = google.visualization.arrayToDataTable(
+                            ['User', 'Tweets'],
+                            ['@5050Parliament', 1308],
+                            ['@FScott5050', 78],
+                            ['@DollyvanT', 60],
+                            ['@Jobaldwintrott', 22],
+                            ['@TinaBhartwas', 18],
+                            ['@Zebra_carol', 17],
+                            ['@Rach31M', 15],
+                            ['@janewhild', 14],
+                            ['@Baronessjenkin', 12],
+                            ['CWOwestmidlands', 10]
+                          );
 
+                          const options = {
+                            title: 'Most active users in the campaign'
+                          };
 
+                          const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+                          chart.draw(data, options);
 
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <meta
-      name="description"
-      content="Analysis of 'Sign Up To Stand' and Women in Parliament"
-    />
-    <meta
-      name="keywords"
-      content="Sign up to stand, Twitter, tweets, ask her to stand, analysis, parliament"
-    />
-    <meta name="web_author" content="Ritu MJ" />
-    <meta name="language" content="English" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-        <h1>Analysis of 'Sign Up To Stand' and Women in Parliament</h1>
-      </div>
+                          }
+                    </script>
 
-      <!-- Header -->
+                    <p>
+                        The second top tweeter is also not a big surprise.
+                        Scott, who goes by the username @FScott5050, mostly
+                        retweets posts related to the SignUpToStand and
+                        AskHerToStand campaigns and those posted by 50:50
+                        Parliament. The last original post on X by Scott was on
+                        November 21 - AskHerToStand day - where she shared a
+                        video of her asking women to 'Sign Up To Stand' on the
+                        50:50 website.
+                    </p>
 
-      <!-- Nav -->
-      <nav id="nav">
-        <ul class="icons">
-          <li>
-            <a
-              href="https://twitter.com/RituMjo"
-              class="icon brands fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/ritu.mj/"
-              class="icon brands fa-instagram"
-              ><span class="label">Instagram</span></a
-            >
-          </li>
-        </ul>
-      </nav>
+                    <p>
+                        Curiously, a small uptick in tweet volume reaching 283
+                        tweets appears to proceed a much greater increase in
+                        overall volume, perhaps suggesting a certain community
+                        was informed of the deal’s confirmation before it
+                        reached mainstream conversation.
+                    </p>
+                    <p>
+                        The third most active account is @DollyvanT whose bio
+                        states that she is a policy consultant. A quick LinkedIn
+                        search gave her full name - Dr Dolly van Tulleken - and
+                        her professional and academic background. A visiting
+                        researcher of the epidemiology unity at her alma mater,
+                        Cambridge University, Tulleken is also the co-founder of
+                        50:50 Parliament's 'Ask Her To Stand' campaign. A
+                        staunch advocate for healthy living, her X feed is
+                        populated with original posts and retweets criticising
+                        ultra-processed foods and demanding better food
+                        education in schools. On November 22 this year, she
+                        extended support to the 'Ask Her To Stand Up' campaign
+                        by pushing out a post urging women to 'Sign Up To
+                        Stand'.
+                    </p>
+                    <p>
+                        The fourth most active user posting the hashtag is
+                        Jobaldwintrott, who X bio refers to herself as a 'soul
+                        mentor'. The author of 'Being FINE: The Other 'F' Word'
+                        talks about mental health, domestic abuse and
+                        occasionally politics and women empowerment on her X
+                        account.
+                    </p>
+                    <p>
+                        Tina Bhartwas is a Labour councillor for Letchworth
+                        North County and consistently retweets posts relating to
+                        her political party. On 'Ask Her To Stand' day 2023, she
+                        shared how 50:50 Parliament helped shape her political
+                        journey and offered to support women interested in
+                        pursuing a career in politics.
+                    </p>
+                    <p>
+                        Carol Ann, according to the website link shared on the
+                        bio of @Zebra_carol, is a business coach and mentor with
+                        a focus on women. Along with retweeting posts on
+                        wellness and Black history, Ann also occasionally shares
+                        on X posts about 50:50 Parliament. In the caption for a
+                        post about the 'Sign Up To Stand' campaign, she has also
+                        implied that she is a Trustee of 50:50 Parliament.
+                    </p>
 
-      <!-- Main -->
-      <div id="main">
-        <!-- Featured Post -->
-        <section class="post">
-          <h2>Background</h2>
-          <p>
-            A century has passed since women were given the right to enter the corridors of power in the British Parliament under the Parliament (Qualification of Women) Act. Although Constance Markiewicz holds the title of being the first woman elected to the House of Commons in 1918,  Nancy Astor was the first female MP to take up a seat at Westminster in 1919. 
-</p>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
-          <p>
-            Labour MP Diane Abbott was the first black woman elected to Parliament in the UK.
-          </p>
-          <p>
-            For  4,503 male MPs, there have only been 491 female MPs in the last 100 years, according to a BBC report. 
-          </p>
-          <h4 style="text-align: center">Tweet to Retweet Ratio</h4>
-          <div class="chart" id="chart1"></div>
-          <p>
-            50:50 Parliament is a cross-party campaign founded by Frances Scott in 2013 - when there were three times more men in Parliament than women - to achieve gender equality in Parliament and other levels of elected office. Scott first launched an online petition which received over 50,000 signatures from people supporting women’s progress in politics.
-          </p>
-          <p>
-            Under the initiative, #SignUpToStand and #AskHerToStand campaigns were started along with group events, peer-to-peer advice, buddy schemes and ‘Become A Friend’.
-            Currently a 30 + strong team, they have encouraged nearly 2,500 women from various backgrounds and ethnicities to #SignUpToStand by offering various access and entry points. 
-                      </p>
-                      <p>Scraping tweets related to the campaign on Sign Up To Stand - Ask Her To Stand Day from May 2020 to November 2023 and drawing a comparison to the data of women in Parliament will help analyse the significance of similar initiatives supporting women in politics and power. 
-                      </p>
-          <h2>Who are the top tweeters?</h2>
-          <h4 style="text-align: center">Tweets Per Minute</h4>
-          <div class="chart" id="chart2"></div>
-          <p>
-            Unsurprisingly, the official X account of the 50:50 Parliament campaign takes up a major chunk - nearly 65 per cent - of the total number of posts since 2020. The account regularly posts announcements about community workshops encouraging women to stand for elections as well as retweeting and congratulating female candidates from across parties in various elections in the UK. The account also retweets posts of its new CEO Lyanne Nichols and founder Frances Scott who share posts and statistics about women in power. 
-          </p>
+                    <h2>Which are the top posts?</h2>
+                    <p>
+                        The most engaged X post with 1506 likes, 426 retweets,
+                        45 quote tweets and 50 replies is from November 21,
+                        2020, by Caroline Lucas, the country's only Green MP.
+                        The Green Party's former leader has 656K followers on
+                        Twitter and was elected for Brighton Pavilion in 2010.
+                        In June last year, she announced her decision to stand
+                        down at the next general election.
+                    </p>
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                            It’s 102 years since the Qualification of Women Act
+                            gave women over 21 the right to stand for Parliament
+                            <br /><br />Since then, only just over 10% of MPs
+                            elected have been women <br /><br />That's why it's
+                            so important to
+                            <a
+                                href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#AskHerToStand</a
+                            >
+                            &amp;
+                            <a
+                                href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#SignUpToStand</a
+                            >
+                            <br /><br />We urgently need
+                            <a
+                                href="https://twitter.com/5050Parliament?ref_src=twsrc%5Etfw"
+                                >@5050Parliament</a
+                            >
+                            <a href="https://t.co/aof89iqI2Z"
+                                >pic.twitter.com/aof89iqI2Z</a
+                            >
+                        </p>
+                        &mdash; Caroline Lucas (@CarolineLucas)
+                        <a
+                            href="https://twitter.com/CarolineLucas/status/1330105328894169088?ref_src=twsrc%5Etfw"
+                            >November 21, 2020</a
+                        >
+                    </blockquote>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+
+                    <p>
+                        The second most engaged post was by the former Prime
+                        Minister of the UK - Boris Johnson. Sharing a video post
+                        of 50:50 Parliament detailing his support for the
+                        campaign, Johnson's tweet garnered 766 likes, 103
+                        retweets, 48 quote tweets and 412 replies. With a 4.6
+                        million strong set of followers, a glance through
+                        Johnson’s X feed will show consistently high engagement
+                        in terms of at least a thousand comments for each post.
+                    </p>
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                            So proud to be supporting this initiative
+                            <a
+                                href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#SignUpToStand</a
+                            >
+                            here:
+                            <a href="https://t.co/6EEtdrrGSM"
+                                >https://t.co/6EEtdrrGSM</a
+                            >
+                            <a
+                                href="https://twitter.com/hashtag/5050Parliament?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#5050Parliament</a
+                            >
+                            <a
+                                href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#AskHerToStand</a
+                            >
+                            <a href="https://t.co/MHnDwqMCU2"
+                                >https://t.co/MHnDwqMCU2</a
+                            >
+                        </p>
+                        &mdash; Boris Johnson (@BorisJohnson)
+                        <a
+                            href="https://twitter.com/BorisJohnson/status/1330156129675046919?ref_src=twsrc%5Etfw"
+                            >November 21, 2020</a
+                        >
+                    </blockquote>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+
+                    <p>
+                        With 600 likes and 67k views for the video, Penny
+                        Mordaunt - the Conservative MP for Portsmouth North -
+                        shared a post in support of the campaign this year on
+                        November 21.
+                    </p>
+
+                    <p>
+                        The Leader of the House of Commons and Lord President of
+                        the Council adopted a personalised approach to
+                        encouraging women to stand for Parliament by sharing her
+                        own journey to politics. The post gathered 80 retweets,
+                        28 quote tweets and 340 replies.
+                    </p>
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                            We can all encourage and support brilliant people,
+                            who might not see themselves in public office, to go
+                            for it. Today
+                            <a
+                                href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#AskHerToStand</a
+                            >
+                            are on a mission.
+                            <a href="https://t.co/cbbUV7hFWF"
+                                >https://t.co/cbbUV7hFWF</a
+                            >
+                            <a
+                                href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#SignUpToStand</a
+                            >
+                            <a href="https://t.co/7fb4EXZ3hj"
+                                >pic.twitter.com/7fb4EXZ3hj</a
+                            >
+                        </p>
+                        &mdash; Penny Mordaunt (@PennyMordaunt)
+                        <a
+                            href="https://twitter.com/PennyMordaunt/status/1726966147172737228?ref_src=twsrc%5Etfw"
+                            >November 21, 2023</a
+                        >
+                    </blockquote>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+
+                    <p>
+                        A video post in 2020 by the X account of 50:50
+                        Parliament showed Angela Rayner, Deputy Labour Leader,
+                        expressing her party's support for the campaign. The
+                        post got 558 likes, 115 retweets, 30 quote tweets and 90
+                        replies.
+                    </p>
+
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                            Today is
+                            <a
+                                href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#AskHerToStand</a
+                            >
+                            day💥<br />Dep Leader of
+                            <a
+                                href="https://twitter.com/UKLabour?ref_src=twsrc%5Etfw"
+                                >@UKLabour</a
+                            >
+                            <a
+                                href="https://twitter.com/AngelaRayner?ref_src=twsrc%5Etfw"
+                                >@AngelaRayner</a
+                            >
+                            says that Labour backs
+                            <a
+                                href="https://twitter.com/hashtag/5050Parliament?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#5050Parliament</a
+                            >
+                            &amp; is proud that 104 Labour MPs are women (51% )
+                            now they want to build even GREATER diversity &amp;
+                            inclusion! <br />Calling ALL women to
+                            <a
+                                href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#SignUpToStand</a
+                            >:
+                            <a href="https://t.co/2Z0ltId8QO"
+                                >https://t.co/2Z0ltId8QO</a
+                            >
+                            <a href="https://t.co/QG7VcBvaPW"
+                                >pic.twitter.com/QG7VcBvaPW</a
+                            >
+                        </p>
+                        &mdash; 50:50 Parliament (@5050Parliament)
+                        <a
+                            href="https://twitter.com/5050Parliament/status/1330092232368590849?ref_src=twsrc%5Etfw"
+                            >November 21, 2020</a
+                        >
+                    </blockquote>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+
+                    <p>
+                        Sharing her personal story, Liberal Democrat leader
+                        Monica Harding's post on 'Sign Up To Stand' day this
+                        year was the fifth most engaging with 369 likes, 110
+                        retweets, 3 quote tweets and 11 replies.
+                    </p>
+
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                            It's
+                            <a
+                                href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#AskHerToStand</a
+                            >
+                            day. In 2018 I was asked to stand. I’d never
+                            considered it but ended up w biggest swing in the
+                            2019 GE, held Foreign Sec Dominic Raab to account
+                            &amp; made
+                            <a
+                                href="https://twitter.com/hashtag/EsherandWalton?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#EsherandWalton</a
+                            >
+                            a marginal. So you go do it too - change stuff.
+                            <a
+                                href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#SignUpToStand</a
+                            >
+                            <a
+                                href="https://twitter.com/hashtag/5050Parliament?src=hash&amp;ref_src=twsrc%5Etfw"
+                                >#5050Parliament</a
+                            >
+                            <a href="https://t.co/Mot6vzI3Zw"
+                                >pic.twitter.com/Mot6vzI3Zw</a
+                            >
+                        </p>
+                        &mdash; Monica Harding (@monicabeharding)
+                        <a
+                            href="https://twitter.com/monicabeharding/status/1727008104657887300?ref_src=twsrc%5Etfw"
+                            >November 21, 2023</a
+                        >
+                    </blockquote>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+
+                    <div
+                        id="myChart1"
+                        style="max-width: 700px; height: 400px"
+                    ></div>
+                    <script>
+                        function drawChart() {
+                            const data = google.visualization.arrayToDataTable([
+                                ['Tweets', 'Month'],
+                                [12, 'November 2020'],
+                                [4.2, 'November 2021'],
+                                ['5.3,NOvember 2022'],
+                                ['4,November 2023'],
+                            ])
+
+                            const options = {
+                                title: 'Tweet rate per day  in November over the years',
+                                hAxis: { title: 'Number of tweets' },
+                                vAxis: { title: 'Period from 2020 - 2023' },
+                                legend: 'none',
+                            }
+
+                            const chart = new google.visualization.LineChart(
+                                document.getElementById('myChart')
+                            )
+                            chart.draw(data, options)
+                        }
+                    </script>
+
+                    <p>
+                        The overarching theme is women empowerment and
+                        sisterhood in the top 20 X posts. While some posts urge
+                        the public to make a change by comparing statistics of
+                        women in politics since the passing of the Qualification
+                        of Women Act, others share personal stories in a bid to
+                        motivate women who are anxious about taking the first
+                        step. The top posts also saw women sharing their success
+                        stories which will further encourage others to run for
+                        public office.
+                    </p>
+                    <p>
+                        The language of the posts indicates positivity with
+                        words like kind, talented, change, hope, encourage,
+                        proud, brilliant, happy, progressing, network, fantastic
+                        and inspire populating the feed. An inclusive
+                        environment is also promoted with words like diversity,
+                        equal, representative, gender, communities, Black, and
+                        marginal also being part of the posts.
+                    </p>
+                    <p>
+                        Interestingly, posts in support of the campaign cut
+                        across political parties as leaders buried ideological
+                        differences to unite for equality in the male-dominated
+                        Parliament.
+                    </p>
+
+                    <p>
+                        The hashtags #SignUpToStand and #AskHerToStand are the
+                        two pillar hashtags of the campaign mostly used together
+                        to strengthen the message on social media and increase
+                        the chances of it going viral, especially on the
+                        particular day.
+                    </p>
+                    <p>
+                        The top 20 tweets may be grouped under three broad
+                        categories - data-driven, personalised and supportive
+                        while all tweets carry a similar theme of inspiration
+                        and powerful women.
+                    </p>
+
+                    <h2>Tweet Volume</h2>
+                    <p>
+                        The year 2021 saw the most number of X posts for the
+                        campaign - 653 out of the overall 2011 tweets spread
+                        across 2020 and 2023. November has seen the most spike
+                        in the number of X posts for #SignUpToStand as the ‘Ask
+                        Her To Stand’ Day falls on the 21st of the month.
+                        However, from 358 X posts in November 2020 to 119 in
+                        2023, the campaign seems to be gradually losing steam in
+                        social media. In 2020 and 2021, August was the least
+                        active month for the campaign on social media while 2022
+                        and 2023 (respectively) saw January and September
+                        producing the lowest number of posts.
+                    </p>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        The number of women MPs in parliament surpassed 5 per
+                        cent for the first time in 1987. The highest jump was in
+                        1997 when the proportion of women MPs doubled from 9 per
+                        cent to 18 per cent. After the Sign Up To Stand campaign
+                        was launched in 2013, the 2015 election saw a rise from
+                        22 per cent to 30 per cent. In the 2019 general
+                        election, the largest-ever proportion of women MPs - 220
+                        out of total 650 - entered the House of Commons hitting
+                        an all-time high of 34 per cent. Of the 140 MPs elected
+                        for the first time in 2019, 57 were women. As of
+                        December 2023, there are 225 women MPs.
+                    </p>
+                    <p>
+                        Women are more likely than men (75 per cent versus 54
+                        per cent) to say that they decided to try to become an
+                        MP because someone asked them to, as per a 2018 study by
+                        Fawcett Society, which makes ‘Sign Up To Stand’ a key
+                        campaign to encourage female participation in politics.
+                        At least 40 per cent of male MPs planned their political
+                        career six months ahead of being selected for their seat
+                        compared to a merely 18 per cent among women, the report
+                        said.
+                    </p>
+
+                    <blockquote class="twitter-tweet tw-align-center">
+                        <p lang="en" dir="ltr">
+                            Before the spin starts, it’s worth remembering that
+                            Brexit is happening against Scotland’s will. And
+                            there is no deal that will ever make up for what
+                            Brexit takes away from us. It’s time to chart our
+                            own future as an independent, European nation.
+                        </p>
+                        &mdash; Nicola Sturgeon (@NicolaSturgeon)
+                        <a
+                            href="https://twitter.com/NicolaSturgeon/status/1342121870192214020?ref_src=twsrc%5Etfw"
+                            >December 24, 2020</a
+                        >
+                    </blockquote>
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+
+                    <h4>Top 5 Tweets</h4>
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Text</th>
+                                    <th>Likes</th>
+                                    <th>Followers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@CarolineLucas</td>
+                                    <td>
+                                        "It’s 102 years since the Qualification
+                                        of Women Act gave women over 21 the
+                                        right to stand for Parliament Since
+                                        then, only just over 10% of MPs elected
+                                        have been women That’s why it’s so
+                                        important to #AskHerToStand &
+                                        #SignUpToStand We urgently need
+                                        @5050Parliament"
+                                    </td>
+                                    <td>1506</td>
+                                    <td>635.7K</td>
+                                </tr>
+                                <tr>
+                                    <td>@BorisJohnson</td>
+                                    <td>
+                                        "So proud to be supporting this
+                                        initiative #SignUpToStand here:
+                                        5050Parliament.co.uk/signupt…
+                                        #5050Parliament #AskHerToStand"
+                                    </td>
+                                    <td>766</td>
+                                    <td>4.6M</td>
+                                </tr>
+                                <tr>
+                                    <td>@PennyMordaunt</td>
+                                    <td>
+                                        "We can all encourage and support
+                                        brilliant people, who might not see
+                                        themselves in public office, to go for
+                                        it. Today #AskHerToStand are on a
+                                        mission. 5050parliament.co.uk/sign-up…
+                                        #SignUpToStand"
+                                    </td>
+                                    <td>600</td>
+                                    <td>247.5K</td>
+                                </tr>
+                                <tr>
+                                    <td>@5050Parliament</td>
+                                    <td>
+                                        "Today is #AskHerToStand day Dep Leader
+                                        of @UKLabour @AngelaRayner says that
+                                        Labour backs #5050Parliament & is proud
+                                        that 104 Labour MPs are women (51% ) now
+                                        they want to build even GREATER
+                                        diversity & inclusion! Calling ALL women
+                                        to #SignUpToStand:
+                                        5050parliament.co.uk/signupt…"
+                                    </td>
+                                    <td>558</td>
+                                    <td>21.7K</td>
+                                </tr>
+                                <tr>
+                                    <td>@MonicaHarding</td>
+                                    <td>
+                                        It’s #AskHerToStand day. In 2018 I was
+                                        asked to stand. I’d never considered it
+                                        but ended up w biggest swing in the 2019
+                                        GE, held Foreign Sec Dominic Raab to
+                                        account & made #EsherandWalton a
+                                        marginal. So you go do it too - change
+                                        stuff. #SignUpToStand #5050Parliament
+                                    </td>
+                                    <td>369</td>
+                                    <td>15.9k</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Discourse</h3>
+                    <span class="image fit">
+                        <img
+                            src="WordCloud.png"
+                            alt="A word cloud of terms associated with Brexit taken from the dataset with some larger and smaller than others based on how frequently they occur. The entire word cloud is in the shape and colour of the Twitter logo."
+                        />
+                    </span>
+                </section>
+            </div>
+
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Ritu MJ</li>
+                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div id="myChart" style="max-width:700px; height:400px">
-        <script src="https://www.gstatic.com/charts/loader.js">
-      
-          google.charts.load('current',{packages:['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-          
-        function drawChart() {
-      
-        
-          const data = google.visualization.arrayToDataTable(
-            ['User', 'Tweets'],
-            ['@5050Parliament', 1308],
-            ['@FScott5050', 78],
-            ['@DollyvanT', 60],
-            ['@Jobaldwintrott', 22],
-            ['@TinaBhartwas', 18],
-            ['@Zebra_carol', 17],
-            ['@Rach31M', 15],
-            ['@janewhild', 14],
-            ['@Baronessjenkin', 12],
-            ['CWOwestmidlands', 10]
-          );
-          
-          const options = {
-            title: 'Most active users in the campaign'
-          };
-          
-          const chart = new google.visualization.BarChart(document.getElementById('myChart'));
-          chart.draw(data, options);
-          
-          } </script>
-        
-      
-          <p>
-            The second top tweeter is also not a big surprise. Scott, who goes by the username @FScott5050, mostly retweets posts related to the SignUpToStand and AskHerToStand campaigns and those posted by 50:50 Parliament. The last original post on X by Scott was on November 21 - AskHerToStand day - where she shared a video of her asking women to 'Sign Up To Stand' on the 50:50 website.</p>
-
-          <p>
-            Curiously, a small uptick in tweet volume reaching 283 tweets
-            appears to proceed a much greater increase in overall volume,
-            perhaps suggesting a certain community was informed of the deal’s
-            confirmation before it reached mainstream conversation.
-          </p>
-          <p>
-            The third most active account is @DollyvanT whose bio states that she is a policy consultant. A quick LinkedIn search gave her full name - Dr Dolly van Tulleken - and her professional and academic background. A visiting researcher of the epidemiology unity at her alma mater, Cambridge University, Tulleken is also the co-founder of 50:50 Parliament's 'Ask Her To Stand' campaign. A staunch advocate for healthy living, her X feed is populated with original posts and retweets criticising ultra-processed foods and demanding better food education in schools. On November 22 this year, she extended support to the 'Ask Her To Stand Up' campaign by pushing out a post urging women to 'Sign Up To Stand'.
-	
-          </p>
-          <p>
-            The fourth most active user posting the hashtag is Jobaldwintrott, who X bio refers to herself as a 'soul mentor'. The author of 'Being FINE: The Other 'F' Word' talks about mental health, domestic abuse and occasionally politics and women empowerment on her X account.
-
-          </p>
-          <p>Tina Bhartwas is a Labour councillor for Letchworth North County and consistently retweets posts relating to her political party. On 'Ask Her To Stand' day 2023, she shared how 50:50 Parliament helped shape her political journey and offered to support women interested in pursuing a career in politics. </p>
-          <p>Carol Ann, according to the website link shared on the bio of @Zebra_carol, is a business coach and mentor with a focus on women. Along with retweeting posts on wellness and Black history, Ann also occasionally shares on X posts about 50:50 Parliament. In the caption for a post about the 'Sign Up To Stand' campaign, she has also implied that she is a Trustee of 50:50 Parliament. </p>
-         
-          <h2>Which are the top posts?</h2>
-          <p>The most engaged X post with 1506 likes, 426 retweets, 45 quote tweets and 50 replies is from November 21, 2020, by Caroline Lucas, the country's only Green MP. The Green Party's former leader has 656K followers on Twitter and was elected for Brighton Pavilion in 2010. In June last year, she announced her decision to stand down at the next general election. 
-      </p>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It’s 102 years since the Qualification of Women Act gave women over 21 the right to stand for Parliament <br><br>Since then, only just over 10% of MPs elected have been women <br><br>That's why it's so important to <a href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw">#AskHerToStand</a> &amp; <a href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw">#SignUpToStand</a> <br><br>We urgently need <a href="https://twitter.com/5050Parliament?ref_src=twsrc%5Etfw">@5050Parliament</a> <a href="https://t.co/aof89iqI2Z">pic.twitter.com/aof89iqI2Z</a></p>&mdash; Caroline Lucas (@CarolineLucas) <a href="https://twitter.com/CarolineLucas/status/1330105328894169088?ref_src=twsrc%5Etfw">November 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        
-      <p>The second most engaged post was by the former Prime Minister of the UK - Boris Johnson. Sharing a video post of 50:50 Parliament detailing his support for the campaign, Johnson's tweet garnered 766 likes, 103 retweets, 48 quote tweets and 412 replies. With a 4.6 million strong set of followers, a glance through Johnson’s X feed will show consistently high engagement in terms of at least a thousand comments for each post. 
-      </p>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">So proud to be supporting this initiative <a href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw">#SignUpToStand</a> here: <a href="https://t.co/6EEtdrrGSM">https://t.co/6EEtdrrGSM</a> <a href="https://twitter.com/hashtag/5050Parliament?src=hash&amp;ref_src=twsrc%5Etfw">#5050Parliament</a> <a href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw">#AskHerToStand</a> <a href="https://t.co/MHnDwqMCU2">https://t.co/MHnDwqMCU2</a></p>&mdash; Boris Johnson (@BorisJohnson) <a href="https://twitter.com/BorisJohnson/status/1330156129675046919?ref_src=twsrc%5Etfw">November 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-      <p>With 600 likes and 67k views for the video, Penny Mordaunt - the Conservative MP for Portsmouth North - shared a post in support of the campaign this year on November 21.</p>
-      
-      <p>The Leader of the House of Commons and Lord President of the Council adopted a personalised approach to encouraging women to stand for Parliament by sharing her own journey to politics. The post gathered 80 retweets, 28 quote tweets and 340 replies.
-      </p>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We can all encourage and support brilliant people, who might not see themselves in public office, to go for it. Today <a href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw">#AskHerToStand</a> are on a mission. <a href="https://t.co/cbbUV7hFWF">https://t.co/cbbUV7hFWF</a> <a href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw">#SignUpToStand</a> <a href="https://t.co/7fb4EXZ3hj">pic.twitter.com/7fb4EXZ3hj</a></p>&mdash; Penny Mordaunt (@PennyMordaunt) <a href="https://twitter.com/PennyMordaunt/status/1726966147172737228?ref_src=twsrc%5Etfw">November 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-      <p>A video post in 2020 by the X account of 50:50 Parliament showed Angela Rayner, Deputy Labour Leader, expressing her party's support for the campaign. The post got 558 likes, 115 retweets, 30 quote tweets and 90 replies. </p>
-      
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today is <a href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw">#AskHerToStand</a> day💥<br>Dep Leader of <a href="https://twitter.com/UKLabour?ref_src=twsrc%5Etfw">@UKLabour</a> <a href="https://twitter.com/AngelaRayner?ref_src=twsrc%5Etfw">@AngelaRayner</a> says that Labour backs <a href="https://twitter.com/hashtag/5050Parliament?src=hash&amp;ref_src=twsrc%5Etfw">#5050Parliament</a> &amp; is proud that 104 Labour MPs are women (51% ) now they want to build even GREATER diversity &amp; inclusion! <br>Calling ALL women to <a href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw">#SignUpToStand</a>: <a href="https://t.co/2Z0ltId8QO">https://t.co/2Z0ltId8QO</a> <a href="https://t.co/QG7VcBvaPW">pic.twitter.com/QG7VcBvaPW</a></p>&mdash; 50:50 Parliament (@5050Parliament) <a href="https://twitter.com/5050Parliament/status/1330092232368590849?ref_src=twsrc%5Etfw">November 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-      <p>Sharing her personal story, Liberal Democrat leader Monica Harding's post on 'Sign Up To Stand' day this year was the fifth most engaging with 369 likes, 110 retweets, 3 quote tweets and 11 replies.  </p>
-      
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It's <a href="https://twitter.com/hashtag/AskHerToStand?src=hash&amp;ref_src=twsrc%5Etfw">#AskHerToStand</a> day. In 2018 I was asked to stand. I’d never considered it but ended up w biggest swing in the 2019 GE, held Foreign Sec Dominic Raab to account &amp; made <a href="https://twitter.com/hashtag/EsherandWalton?src=hash&amp;ref_src=twsrc%5Etfw">#EsherandWalton</a> a marginal. So you go do it too - change stuff. <a href="https://twitter.com/hashtag/SignUpToStand?src=hash&amp;ref_src=twsrc%5Etfw">#SignUpToStand</a> <a href="https://twitter.com/hashtag/5050Parliament?src=hash&amp;ref_src=twsrc%5Etfw">#5050Parliament</a> <a href="https://t.co/Mot6vzI3Zw">pic.twitter.com/Mot6vzI3Zw</a></p>&mdash; Monica Harding (@monicabeharding) <a href="https://twitter.com/monicabeharding/status/1727008104657887300?ref_src=twsrc%5Etfw">November 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-      
-      <div id="myChart1" style="max-width:700px; height:400px"></div>
-      function drawChart() {
-      // Set Data
-      const data = google.visualization.arrayToDataTable([
-        ['Tweets','Month'],
-        [12, November 2020],[4.2, November 2021],[5.3,NOvember 2022],[4,November 2023]
-        ]);
-      // Set Options
-      const options = {
-        title: 'Tweet rate per day  in November over the years',
-        hAxis: {title: 'Number of tweets'},
-        vAxis: {title: 'Period from 2020 - 2023'},
-        legend: 'none'
-      };
-      // Draw Chart
-      const chart = new google.visualization.LineChart(document.getElementById('myChart'));
-      chart.draw(data, options);
-      }
-<p>The overarching theme is women empowerment and sisterhood in the top 20 X posts. While some posts urge the public to make a change by comparing statistics of women in politics since the passing of the Qualification of Women Act, others share personal stories in a bid to motivate women who are anxious about taking the first step. The top posts also saw women sharing their success stories which will further encourage others to run for public office. 
-</p>
-<p>The language of the posts indicates positivity with words like kind, talented, change, hope, encourage, proud, brilliant, happy, progressing, network, fantastic and inspire populating the feed. An inclusive environment is also promoted with words like diversity, equal, representative, gender, communities, Black, and marginal also being part of the posts. </p>
-<p>Interestingly, posts in support of the campaign cut across political parties as leaders buried ideological differences to unite for equality in the male-dominated Parliament.</p>
-
-<p>The hashtags #SignUpToStand and #AskHerToStand are the two pillar hashtags of the campaign mostly used together to strengthen the message on social media and increase the chances of it going viral, especially on the particular day.
-</p>
-<p>The top 20 tweets may be grouped under three broad categories - data-driven, personalised and supportive while all tweets carry a similar theme of inspiration and powerful women. 
-
-</p>
-
-<h2>Tweet Volume</h2>
-      <p>The year 2021 saw the most number of X posts for the campaign - 653 out of the overall 2011 tweets spread across 2020 and 2023. November has seen the most spike in the number of X posts for #SignUpToStand as the ‘Ask Her To Stand’ Day falls on the 21st of the month. However, from 358 X posts in November 2020 to 119 in 2023, the campaign seems to be gradually losing steam in social media. In 2020 and 2021, August was the least active month for the campaign on social media while 2022 and 2023 (respectively) saw January and September producing the lowest number of posts. 
-</p>
-
-<h2>Conclusion</h2>     
-<p>The number of women MPs in parliament surpassed 5 per cent for the first time in 1987. The highest jump was in 1997 when the proportion of women MPs doubled from 9 per cent to 18 per cent. After the Sign Up To Stand campaign was launched in 2013, the 2015 election saw a rise from 22 per cent to 30 per cent. In the 2019 general election, the largest-ever proportion of women MPs - 220 out of total 650 - entered the House of Commons hitting an all-time high of 34 per cent. Of the 140 MPs elected for the first time in 2019, 57 were women. As of December 2023, there are 225 women MPs. 
-      </p>
-<p>Women are more likely than men (75 per cent versus 54 per cent) to say that they decided to try to become an MP because someone asked them to, as per a 2018 study by Fawcett Society, which makes ‘Sign Up To Stand’ a key campaign to encourage female participation in politics. At least 40 per cent of male MPs planned their political career six months ahead of being selected for their seat compared to a merely 18 per cent among women, the report said.
-</p>
-      
-      <blockquote class="twitter-tweet tw-align-center">
-            <p lang="en" dir="ltr">
-              Before the spin starts, it’s worth remembering that Brexit is
-              happening against Scotland’s will. And there is no deal that will
-              ever make up for what Brexit takes away from us. It’s time to
-              chart our own future as an independent, European nation.
-            </p>
-            &mdash; Nicola Sturgeon (@NicolaSturgeon)
-            <a
-              href="https://twitter.com/NicolaSturgeon/status/1342121870192214020?ref_src=twsrc%5Etfw"
-              >December 24, 2020</a
-            >
-          </blockquote>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
-        
-          <h4>Top 5 Tweets</h4>
-          <div class="table-wrapper">
-            <table class="alt">
-              <thead>
-                <tr>
-                  <th>User</th>
-                  <th>Text</th>
-                  <th>Likes</th>
-                  <th>Followers</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>@CarolineLucas</td>
-                  <td>
-                    "It’s 102 years since the Qualification of Women Act gave women over 21 the right to stand for Parliament 
-
-Since then, only just over 10% of MPs elected have been women 
-
-That’s why it’s so important to  #AskHerToStand & #SignUpToStand 
-
-We urgently need @5050Parliament"
- </td>
-                  <td>1506</td>
-                  <td>635.7K</td>
-                </tr>
-                <tr>
-                  <td>@BorisJohnson</td>
-                  <td>"So proud to be supporting this initiative 
-                    #SignUpToStand here: 5050Parliament.co.uk/signupt…
-                    #5050Parliament #AskHerToStand"
-                    </td>
-                  <td>766</td>
-                  <td>4.6M</td>
-                </tr>
-                <tr>
-                  <td>@PennyMordaunt</td>
-                  <td>
-                    "We can all encourage and support brilliant people, who might not see themselves in public office, to go for it. Today #AskHerToStand are on a mission. 
-5050parliament.co.uk/sign-up… #SignUpToStand"
-
-                  </td>
-                  <td>600</td>
-                  <td>247.5K</td>
-                </tr>
-                <tr>
-                  <td>
-                    @5050Parliament
-                  </td>
-                  <td>"Today is #AskHerToStand day
-                    Dep Leader of @UKLabour @AngelaRayner says that Labour backs #5050Parliament & is proud that 104 Labour MPs are women (51% ) now they want to build even GREATER diversity & inclusion! 
-                    Calling ALL women to #SignUpToStand: 5050parliament.co.uk/signupt…"
-                    </td>
-                  <td>558</td>
-                  <td>21.7K</td>
-                </tr>
-                <tr>
-                  <td>@MonicaHarding</td>
-                  <td>
-                    It’s #AskHerToStand day. In 2018 I was asked to stand. I’d never considered it but ended up w biggest swing in the 2019 GE, held Foreign Sec Dominic Raab to account & made #EsherandWalton a marginal. So you go do it too - change stuff. #SignUpToStand #5050Parliament
-
-                  </td>
-                  <td>369</td>
-                  <td>15.9k</td>
-                </tr>
-               </tbody>
-            </table>
-          </div>
-          <h3>Discourse</h3>
-          <span class="image fit">
-            <img
-              src="WordCloud.png"
-              alt="A word cloud of terms associated with Brexit taken from the dataset with some larger and smaller than others based on how frequently they occur. The entire word cloud is in the shape and colour of the Twitter logo."
-            />
-          </span>
-          <p>
-
-      <!-- Copyright -->
-      <div id="copyright">
-        <ul>
-          <li>&copy; Ritu MJ</li>
-          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="charts.js"></script>
-  </body>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="charts.js"></script>
+    </body>
 </html>
